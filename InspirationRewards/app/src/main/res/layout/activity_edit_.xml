@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Edit_Activity">
+
+    <ImageView
+        android:id="@+id/edit_Photo"
+        android:layout_width="192sp"
+        android:layout_height="240sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/default_photo" />
+
+    <ImageView
+        android:id="@+id/editAddIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addImage"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_Photo"
+        app:layout_constraintEnd_toEndOf="@+id/edit_Photo"
+        app:layout_constraintStart_toStartOf="@+id/edit_Photo"
+        app:layout_constraintTop_toTopOf="@+id/edit_Photo"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <EditText
+        android:id="@+id/editUsernameText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#88DDDDDD"
+        android:ems="10"
+        android:hint="USERNAME"
+        android:inputType="textPersonName"
+        android:padding="2sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edit_Photo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editPasswordText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#88DDDDDD"
+        android:ems="10"
+        android:hint="PASSWORD"
+        android:inputType="textPassword"
+        android:padding="2sp"
+        app:layout_constraintEnd_toEndOf="@+id/editUsernameText"
+        app:layout_constraintStart_toStartOf="@+id/editUsernameText"
+        app:layout_constraintTop_toBottomOf="@+id/editUsernameText" />
+
+    <CheckBox
+        android:id="@+id/editAdminCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Admin. User"
+        app:layout_constraintStart_toStartOf="@+id/editUsernameText"
+        app:layout_constraintTop_toBottomOf="@+id/editPasswordText" />
+
+    <EditText
+        android:id="@+id/editFirstnameText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="#88DDDDDD"
+        android:ems="10"
+        android:hint="FIRSTNAME"
+        android:inputType="textPersonName"
+        android:padding="2sp"
+        app:layout_constraintEnd_toEndOf="@+id/editUsernameText"
+        app:layout_constraintStart_toStartOf="@+id/editUsernameText"
+        app:layout_constraintTop_toBottomOf="@+id/editAdminCheckBox" />
+
+    <EditText
+        android:id="@+id/editLastnameText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#88DDDDDD"
+        android:ems="10"
+        android:hint="LASTNAME"
+        android:inputType="textPersonName"
+        android:padding="2sp"
+        app:layout_constraintEnd_toEndOf="@+id/editUsernameText"
+        app:layout_constraintStart_toStartOf="@+id/editUsernameText"
+        app:layout_constraintTop_toBottomOf="@+id/editFirstnameText" />
+
+    <TextView
+        android:id="@+id/editDepartmentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Department:"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_Photo" />
+
+    <EditText
+        android:id="@+id/editDepartmentText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#88DDDDDD"
+        android:ems="10"
+        android:hint="DEPARTMENT"
+        android:inputType="textPersonName"
+        android:padding="2sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editDepartmentLabel"
+        app:layout_constraintTop_toTopOf="@+id/editDepartmentLabel" />
+
+    <TextView
+        android:id="@+id/editPositionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Position:"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/editDepartmentLabel"
+        app:layout_constraintTop_toBottomOf="@+id/editDepartmentLabel" />
+
+    <EditText
+        android:id="@+id/editPositionText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#88DDDDDD"
+        android:ems="10"
+        android:hint="POSITION"
+        android:inputType="textPersonName"
+        android:padding="2sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editDepartmentText"
+        app:layout_constraintTop_toBottomOf="@+id/editDepartmentText" />
+
+    <TextView
+        android:id="@+id/editStoryLabel"
+        android:layout_width="109dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="8dp"
+        android:text="Your Story:"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/editDepartmentLabel"
+        app:layout_constraintTop_toBottomOf="@+id/editPositionLabel" />
+
+    <EditText
+        android:id="@+id/editStoryText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#88DDDDDD"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:padding="2sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editStoryLabel" />
+
+    <TextView
+        android:id="@+id/editStoryCharCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="(0 of 360)"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/editStoryLabel"
+        app:layout_constraintTop_toTopOf="@+id/editStoryLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
